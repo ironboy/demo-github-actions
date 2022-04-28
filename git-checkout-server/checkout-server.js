@@ -13,6 +13,7 @@ const dbPath = path.join(__dirname, '../backend', 'database', 'bookshop.db');
 // A function that does all necessary git checkout, clean up etc
 function checkout() {
   execSync('git pull'); // pull latest changes
+  execSync('npm install'); // install new npm modules mentioned in package.json
   execSync('rm ' + dbPath); // remove the database
   execSync('cp ' + dbTemplatePath + ' ' + dbPath); // copy dbTemplate to db
   execSync('npm run build'); // build the dist folder that will be served

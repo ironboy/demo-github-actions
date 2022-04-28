@@ -8,6 +8,8 @@ Note: backend/database/bookshop.db is git-ignored!
 # Steps for "going live":
 * Make a pull: 
   git pull
+* Run npm install (in case any changes to package.json):
+  npm install
 * Delete the bookshop.db file:
   rm backend/database/bookshop-template.db
 * Copy db-template to db that shall run:
