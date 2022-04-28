@@ -11,6 +11,7 @@ const server = http.createServer(function (req, res) {
   if (req.url === '/AC0071D2F4348364A725AA647A24BB2F05C2D05D7F80A7BBB90C1198E768D752') {
     // do a git pull
     execSync('git pull');
+    console.log('has run git pull');
   }
 });
 
