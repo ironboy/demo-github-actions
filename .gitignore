@@ -1,6 +1,6 @@
 # Ignore the database file used by the backend
 # since it changes for every login etc...
-backend/database/bookshop.db
+/backend/database/bookshop.db
 
 # Logs
 logs
