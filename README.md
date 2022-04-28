@@ -8,6 +8,8 @@ Note: backend/database/bookshop.db is git-ignored!
 # Steps for "going live":
 * Make a pull: 
   git pull
+* Delete the bookshop.db file:
+  rm backend/database/bookshop-template.db
 * Copy db-template to db that shall run:
   cp backend/database/bookshop-template.db backend/database/bookshop.db
 * Build the project (the backend will then serve the dist folder):
