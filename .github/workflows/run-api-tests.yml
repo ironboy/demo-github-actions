@@ -30,13 +30,7 @@ jobs:
       # based backend without blocking the terminal
     - run: npm install -g pm2
       # copy db-template to real db
-    - run: pwd
-    - run: ls
-    - run: cd backend/database
-    - run: pwd
-    - run: ls
-    - run: cp bookshop-template.db bookshop.db
-    - run: cd ../../ 
+    - run: cp backend/database/bookshop-template.db backend/database/bookshop.db
       # start up our backend
     - run: pm2 start backend/index.js
       # run our api tests
@@ -64,9 +58,7 @@ jobs:
       # based backend without blocking the terminal
     - run: npm install -g pm2
       # copy db-template to real db
-    - run: cd backend/database
-    - run: cp bookshop-template.db bookshop.db
-    - run: cd ../../ 
+    - run: cp backend/database/bookshop-template.db backend/database/bookshop.db
       # start up our backend
     - run: pm2 start backend/index.js
       # install Chrome (latest stable version)
@@ -97,9 +89,7 @@ jobs:
       # based backend without blocking the terminal
     - run: npm install -g pm2
       # copy db-template to real db
-    - run: cd backend/database
-    - run: cp bookshop-template.db bookshop.db
-    - run: cd ../../ 
+    - run: cp backend/database/bookshop-template.db backend/database/bookshop.db
       # start up our backend because the methods
       # we are unit testing calls the backend
     - run: pm2 start backend/index.js
