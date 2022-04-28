@@ -89,3 +89,9 @@ jobs:
     - run: pm2 start backend/index.js
       # run the unit tests
     - run: npm run unit-tests
+
+  golive:
+    # demand that the 3 test jobs succeed
+    # before running go live
+    needs: [api-tests, wdio-tests, jest-tests]
+    - run: curl https://sub.yogadev.se/AC0071D2F4348364A725AA647A24BB2F05C2D05D7F80A7BBB90C1198E768D752
