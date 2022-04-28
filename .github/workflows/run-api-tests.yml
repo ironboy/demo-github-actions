@@ -30,6 +30,7 @@ jobs:
       # based backend without blocking the terminal
     - run: npm install -g pm2
       # copy db-template to real db
+    - run: pwd
     - run: cd backend/database
     - run: cp bookshop-template.db bookshop.db
     - run: cd ../../ 
