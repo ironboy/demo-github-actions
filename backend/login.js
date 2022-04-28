@@ -1,5 +1,6 @@
 const session = require('express-session');
 const store = require('better-express-store');
+const path = require('path');
 const acl = require('./acl');
 const passwordEncryptor = require('./passwordEncryptor');
 
@@ -9,7 +10,7 @@ module.exports = function (app, db) {
     resave: false,
     saveUninitialized: true,
     cookie: { secure: 'auto' },
-    store: store({ dbPath: './database/bookshop.db' })
+    store: store({ dbPath: path.join(__dirname, 'database', 'bookshop.db') })
   }));
 
   app.post('/api/login', (req, res) => {
