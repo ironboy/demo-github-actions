@@ -7,7 +7,7 @@ const pauseTime = 0;
 
 When(/^I enter the text "([^"]*)" in the filter$/, async filterText => {
 
-  let filterFieldEl = await $('[placeholder="Filter by name"]');
+  let filterFieldEl = await $('[placeholder="Filter by author name"]');
   await filterFieldEl.setValue(filterText);
   await browser.pause(pauseTime);
 });
