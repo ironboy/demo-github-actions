@@ -20,3 +20,8 @@ Note: backend/database/bookshop.db is git-ignored!
   pm2 restart main-app
 
 Note: We name our app/backend main-app when we run it with pm2.
+
+### Note about DEPLOYMENT_KEY
+* Needs to be a secret on GitHub
+* Needs to be a environment variable on your start of the checkout server through PM2
+* Remember and keep for yourself as an admin.
