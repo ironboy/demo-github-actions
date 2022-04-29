@@ -32,16 +32,16 @@ export default function App() {
 
   return (
     <main>
-      <h1>Author search, version 1.1</h1>
-      <input onChange={filter} value={filterText} placeholder="Filter by author name" />
-      <div className="author-list">
-        {authors.map(({ id, name, description, isFavorite, hide }) => hide ? null :
-          <div className="author" key={id}>
-            <h3 className="author-name" onClick={() => addAsFavorite(id)}>{isFavorite ? <span className="star">⭐</span> : ''}{name}</h3>
-            <p className="author-description">{description}</p>
-          </div>
-        )}
-      </div>
+      <h1>Author search, version 1.2/h1>
+        <input onChange={filter} value={filterText} placeholder="Filter by author name" />
+        <div className="author-list">
+          {authors.map(({ id, name, description, isFavorite, hide }) => hide ? null :
+            <div className="author" key={id}>
+              <h3 className="author-name" onClick={() => addAsFavorite(id)}>{isFavorite ? <span className="star">⭐</span> : ''}{name}</h3>
+              <p className="author-description">{description}</p>
+            </div>
+          )}
+        </div>
     </main >
   );
 }
