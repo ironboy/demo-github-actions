@@ -32,6 +32,7 @@ export default function App() {
 
   return (
     <main>
+      <h1>Author search, version 1.0</h1>
       <input onChange={filter} value={filterText} placeholder="Filter by author name" />
       <div className="author-list">
         {authors.map(({ id, name, description, isFavorite, hide }) => hide ? null :
