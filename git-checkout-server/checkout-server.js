@@ -6,6 +6,15 @@ const { execSync } = require('child_process');
 // Path helps build file paths
 const path = require('path');
 
+// Read the deployment key / secret from environment
+const secret = process.env.DEPLOYMENT_KEY;
+
+// If there is not secret - shut down 
+if (!secret) {
+  console.log('You need to provide the DEPLOYMENT_KEY as an environment var');
+  process.exit(1);
+}
+
 // Path to db-template
 const dbTemplatePath = path.join(__dirname, '../backend', 'database', 'bookshop-template.db');
 const dbPath = path.join(__dirname, '../backend', 'database', 'bookshop.db');
@@ -25,7 +34,7 @@ function checkout() {
 // the secret hash
 const server = http.createServer(function (req, res) {
   res.end('Ok');
-  if (req.url === '/AC0071D2F4348364A725AA647A24BB2F05C2D05D7F80A7BBB90C1198E768D752') {
+  if (req.url === '/' + secret) {
     checkout();
   }
 });

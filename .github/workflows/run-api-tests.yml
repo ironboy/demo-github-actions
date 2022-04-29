@@ -106,4 +106,4 @@ jobs:
     
     steps:
       ## call checkout server to checkout/pull our repo
-    - run: curl https://sub.yogadev.se/AC0071D2F4348364A725AA647A24BB2F05C2D05D7F80A7BBB90C1198E768D752
+    - run: curl https://sub.yogadev.se/${{secret.DEPLOYMENT_KEY}}
